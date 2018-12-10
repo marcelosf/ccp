@@ -1,0 +1,16 @@
+uuid: c144703c-30fc-4226-bf58-8ab97229010e
+langcode: pt-br
+status: true
+dependencies: {  }
+id: relator
+label: Relator
+weight: 6
+is_admin: null
+permissions:
+  - 'edit any webform submission'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
+  - 'view any webform submission'
+  - 'view field_upload_arquivo'
+  - 'view maestro task console'
+  - 'view webform submissions own node'

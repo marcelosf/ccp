@@ -1,0 +1,9 @@
+uuid: 56460cb8-05de-4723-90d2-231262320166
+langcode: pt-br
+status: true
+dependencies: {  }
+id: candidato
+label: Candidato
+weight: 3
+is_admin: null
+permissions: {  }

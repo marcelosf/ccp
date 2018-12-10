@@ -1,0 +1,22 @@
+uuid: deb6d9ca-c80a-4b0d-8229-cd9070e339a1
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - material_admin
+_core:
+  default_config_hash: 8LEyMO8BKhrdirJnCGpbVdYsn8sUmp7R9U6mus8e7UU
+id: material_admin_login
+theme: material_admin
+region: status
+weight: -3
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

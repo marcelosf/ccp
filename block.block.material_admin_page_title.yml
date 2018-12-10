@@ -1,0 +1,20 @@
+uuid: 4d112133-56f0-487d-a05c-9b35eb74c238
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - material_admin
+_core:
+  default_config_hash: 9I_g1wEzqqihUALz9bYgroC-pDsv9GBfxui8HNsDO6M
+id: material_admin_page_title
+theme: material_admin
+region: header
+weight: 3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title (Material Admin)'
+  provider: core
+  label_display: '0'
+visibility: {  }

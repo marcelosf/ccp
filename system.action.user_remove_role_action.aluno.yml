@@ -1,0 +1,14 @@
+uuid: 79eb0726-66c4-468e-9f12-9d2e4b348f29
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.aluno
+  module:
+    - user
+id: user_remove_role_action.aluno
+label: 'Remove the Aluno role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: aluno

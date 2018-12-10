@@ -1,0 +1,14 @@
+uuid: 57ce56db-787b-4e57-88e1-246568a024e3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.relator
+  module:
+    - user
+id: user_remove_role_action.relator
+label: 'Remove the Relator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: relator

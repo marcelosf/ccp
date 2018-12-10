@@ -1,0 +1,22 @@
+uuid: 33fec177-f1b3-4d39-95e5-ca8a227b34b8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.upload_privado
+id: node.upload_privado.status
+field_name: status
+entity_type: node
+bundle: upload_privado
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

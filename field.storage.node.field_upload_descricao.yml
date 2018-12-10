@@ -1,0 +1,20 @@
+uuid: 62a87833-1cc3-4e5b-81d0-042d4735a2f9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_upload_descricao
+field_name: field_upload_descricao
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

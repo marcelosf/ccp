@@ -1,0 +1,14 @@
+uuid: c6556bcd-6f93-4689-aaa6-4e5d18e66d8e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.comissao_de_avaliacao
+  module:
+    - user
+id: user_add_role_action.comissao_de_avaliacao
+label: 'Add the Comissão de avaliação role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: comissao_de_avaliacao

@@ -1,0 +1,317 @@
+uuid: 41d3837b-209e-4018-8002-7fb3c3ff5f1f
+langcode: pt-br
+status: true
+dependencies: {  }
+id: relatorios
+label: Relatórios
+app_group: 0
+canvas_height: 900
+canvas_width: 800
+default_workflow_timeline_stage_count: 0
+show_details: false
+validated: true
+views_attached:
+  maestro_entity_identifiers:
+    view_machine_name: maestro_entity_identifiers
+    view_weight: -10
+    view_display: 'taskconsole_display;Task Console Display'
+  maestro_completed_tasks:
+    view_machine_name: maestro_completed_tasks
+    view_weight: -9
+    view_display: default;Master
+variables:
+  initiator:
+    variable_id: initiator
+    variable_value: '0'
+  workflow_timeline_stage_count:
+    variable_id: workflow_timeline_stage_count
+    variable_value: ''
+  workflow_current_stage:
+    variable_id: workflow_current_stage
+    variable_value: ''
+  workflow_current_stage_message:
+    variable_id: workflow_current_stage_message
+    variable_value: ''
+  geo_relatorio_orientador:
+    variable_id: geo_relatorio_orientador
+    variable_value: ''
+  geo_relatorio_relator:
+    variable_id: geo_relatorio_relator
+    variable_value: ''
+tasks:
+  start:
+    id: start
+    tasktype: MaestroStart
+    label: Start
+    nextstep: geo_relatorio_set_orientador
+    nextfalsestep: ''
+    top: '30'
+    left: '170'
+    assignby: fixed
+    assignto: engine
+  end:
+    id: end
+    tasktype: MaestroEnd
+    label: End
+    nextstep: ''
+    nextfalsestep: ''
+    top: '40'
+    left: '500'
+    assignby: fixed
+    assignto: engine
+  geo_relatorio_preencher_parecer:
+    id: geo_relatorio_preencher_parecer
+    label: 'Preencher parecer'
+    tasktype: MaestroWebform
+    nextstep: geo_relatorio_definir_relatorio
+    nextfalsestep: ''
+    top: '280'
+    left: '170'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      unique_id: submission
+      webform_machine_name: relatorios
+      modal: notmodal
+      skip_webform_handlers: 0
+      webform_nodes_attached_to: node/2
+      use_nodes_attached: 1
+      webform_nodes_attached_variable: none
+      redirect_to: taskconsole
+      show_edit_form: 1
+    assigned: 'user:variable:geo_relatorio_orientador'
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: ''
+      notification_reminder: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0
+  geo_relatorio_set_orientador:
+    id: geo_relatorio_set_orientador
+    label: 'Set Orientador'
+    tasktype: MaestroSetProcessVariable
+    nextstep: geo_relatorio_preencher_parecer
+    nextfalsestep: ''
+    top: '150'
+    left: '170'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      spv:
+        variable: geo_relatorio_orientador
+        method: bycontentfunction
+        variable_value: 'maestro_webform_spv_get_user_by_id:submission,geo_relatorio_orientador'
+    assigned: ''
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: null
+      notification_reminder: null
+      notification_escalation: null
+      reminder_after: null
+      escalation_after: null
+  geo_relatorio_definir_relatorio:
+    id: geo_relatorio_definir_relatorio
+    label: 'Definir Relator'
+    tasktype: MaestroWebform
+    nextstep: geo_relatorio_set_relator
+    nextfalsestep: ''
+    top: '400'
+    left: '170'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      unique_id: submission
+      webform_machine_name: relatorios
+      modal: notmodal
+      skip_webform_handlers: 0
+      webform_nodes_attached_to: node/2
+      use_nodes_attached: 1
+      webform_nodes_attached_variable: none
+      redirect_to: taskconsole
+      show_edit_form: 1
+    assigned: 'role:fixed:coordenador'
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: ''
+      notification_reminder: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0
+  geo_relatorio_set_relator:
+    id: geo_relatorio_set_relator
+    label: 'Set Relator'
+    tasktype: MaestroSetProcessVariable
+    nextstep: geo_relatorio_preencher_parecer_relator
+    nextfalsestep: ''
+    top: '400'
+    left: '340'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      spv:
+        variable: geo_relatorio_relator
+        method: bycontentfunction
+        variable_value: 'maestro_webform_spv_get_user_by_id:submission,geo_relatorio_relator'
+    assigned: ''
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: null
+      notification_reminder: null
+      notification_escalation: null
+      reminder_after: null
+      escalation_after: null
+  geo_relatorio_preencher_parecer_relator:
+    id: geo_relatorio_preencher_parecer_relator
+    label: 'Preencher Parecer'
+    tasktype: MaestroWebform
+    nextstep: geo_relatorio_homologar_parecer
+    nextfalsestep: ''
+    top: '400'
+    left: '500'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      unique_id: submission
+      webform_machine_name: relatorios
+      modal: notmodal
+      skip_webform_handlers: 0
+      webform_nodes_attached_to: node/2
+      use_nodes_attached: 1
+      webform_nodes_attached_variable: none
+      redirect_to: taskconsole
+      show_edit_form: 1
+    assigned: 'user:variable:geo_relatorio_relator'
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: ''
+      notification_reminder: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0
+  geo_relatorio_homologar_parecer:
+    id: geo_relatorio_homologar_parecer
+    label: 'Homologar Parecer'
+    tasktype: MaestroWebform
+    nextstep: geo_relatorio_homologacao_parecer
+    nextfalsestep: ''
+    top: '260'
+    left: '500'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      unique_id: submission
+      webform_machine_name: relatorios
+      modal: notmodal
+      skip_webform_handlers: 0
+      webform_nodes_attached_to: node/2
+      use_nodes_attached: 1
+      webform_nodes_attached_variable: none
+      redirect_to: taskconsole
+      show_edit_form: 1
+    assigned: 'role:fixed:coordenador'
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: ''
+      notification_reminder: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0
+  geo_relatorio_homologacao_parecer:
+    id: geo_relatorio_homologacao_parecer
+    label: 'Homologação Parecer'
+    tasktype: MaestroWebform
+    nextstep: end
+    nextfalsestep: ''
+    top: '132'
+    left: '492'
+    assignby: fixed
+    assignto: ''
+    raphael: ''
+    to: ''
+    pointedfrom: ''
+    falsebranch: ''
+    lines: {  }
+    data:
+      unique_id: submission
+      webform_machine_name: relatorios
+      modal: notmodal
+      skip_webform_handlers: 0
+      webform_nodes_attached_to: node/2
+      use_nodes_attached: 1
+      webform_nodes_attached_variable: none
+      redirect_to: taskconsole
+      show_edit_form: 1
+    assigned: 'user:variable:initiator,user:variable:geo_relatorio_orientador'
+    runonce: false
+    handler: ''
+    showindetail: true
+    participate_in_workflow_status_stage: false
+    workflow_status_stage_number: 0
+    workflow_status_stage_message: ''
+    notifications:
+      notification_assignment: ''
+      notification_reminder: ''
+      notification_escalation: ''
+      reminder_after: 0
+      escalation_after: 0

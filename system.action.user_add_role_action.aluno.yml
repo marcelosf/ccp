@@ -1,0 +1,14 @@
+uuid: 7764ad65-4fd8-4933-a9e5-39a259a27ec1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.aluno
+  module:
+    - user
+id: user_add_role_action.aluno
+label: 'Add the Aluno role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: aluno

@@ -1,0 +1,14 @@
+uuid: 12e84f77-d1ee-4b68-bd8a-55a0f5eb8571
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.comissao_de_avaliacao
+  module:
+    - user
+id: user_remove_role_action.comissao_de_avaliacao
+label: 'Remove the Comissão de avaliação role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: comissao_de_avaliacao

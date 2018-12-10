@@ -1,0 +1,10 @@
+uuid: 0e15d894-5a56-470d-8c8d-21797789e3df
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - maestro
+id: maestro_queue.token
+label: Token
+targetEntityType: maestro_queue
+cache: true

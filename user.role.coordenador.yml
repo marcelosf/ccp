@@ -1,0 +1,16 @@
+uuid: 6808277f-8aec-4112-850e-c4069a79ecfc
+langcode: pt-br
+status: true
+dependencies: {  }
+id: coordenador
+label: Coordenador
+weight: 4
+is_admin: null
+permissions:
+  - 'edit any webform submission'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
+  - 'view any webform submission'
+  - 'view field_upload_arquivo'
+  - 'view maestro task console'
+  - 'view webform submissions own node'

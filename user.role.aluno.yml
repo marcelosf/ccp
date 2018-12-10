@@ -1,0 +1,10 @@
+uuid: ca291e47-8d8a-4b9a-91d3-069aad1b9ffd
+langcode: pt-br
+status: true
+dependencies: {  }
+id: aluno
+label: Aluno
+weight: 9
+is_admin: null
+permissions:
+  - 'view maestro task console'

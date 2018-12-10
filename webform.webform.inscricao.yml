@@ -1,0 +1,181 @@
+uuid: 0807bf70-1102-4d48-bf16-bc406d0aef60
+langcode: pt-br
+status: open
+dependencies:
+  module:
+    - maestro_webform
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: inscricao
+title: Inscrição
+description: 'Ficha de incri&ccedil;&atilde;o para o programa de p&oacute;s-gradua&ccedil;&atilde;o em geof&iacute;sica'
+category: 'Ficha de inscrição geofísica'
+elements: "geo_inscricao_nivel:\n  '#type': select\n  '#title': Nível\n  '#options':\n    Mestrado: Mestrado\n    'Doutorado Direto': 'Doutorado Direto'\n    Doutorado: Doutorado\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - anonymous\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_nome_completo:\n  '#type': textfield\n  '#title': 'Nome completo'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_sexo:\n  '#type': select\n  '#title': Sexo\n  '#options':\n    Masculino: Masculino\n    Feminino: Feminino\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_data_de_nascimento:\n  '#type': date\n  '#title': 'Data de nascimento'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#min': '-100 years'\n  '#max': '-10 years'\n  '#required': true\ngeo_inscricao_cidade:\n  '#type': textfield\n  '#title': Cidade\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_estado:\n  '#type': textfield\n  '#title': Estado\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_nome_do_pai:\n  '#type': textfield\n  '#title': 'Nome do pai'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_nome_da_mae:\n  '#type': textfield\n  '#title': 'Nome da mãe'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_documento_de_identidade_rg:\n  '#type': textfield\n  '#title': 'Documento de Identidade - RG'\n  '#input_mask': '99999999-*'\n  '#required': true\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\ngeo_inscricao_orgao_expedidor:\n  '#type': select\n  '#title': 'Orgão Expedidor'\n  '#options': orgao_emissor\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_data_emissao:\n  '#type': date\n  '#title': 'Data de emissão'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_cpf:\n  '#type': textfield\n  '#title': CPF\n  '#input_mask': '999.999.999-**'\n  '#required': true\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\ngeo_inscricao_endereco:\n  '#type': webform_viacep_address_composite\n  '#title': Endereço\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_telefone:\n  '#type': textfield\n  '#title': Telefone\n  '#input_mask': '(99)9999999[9]'\n  '#required': true\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\ngeo_inscricao_e_mail:\n  '#type': webform_email_multiple\n  '#title': E-mail\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#required': true\ngeo_inscricao_graduacao_concluida_em:\n  '#type': fieldset\n  '#title': 'Graduação concluída em:'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_inscricao_data_conclusao_graduacao:\n    '#type': date\n    '#title': Data\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#required': true\n  geo_inscricao_graduacao_instituicao:\n    '#type': textfield\n    '#title': Instituição\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#required': true\n  geo_inscricao_curso:\n    '#type': textfield\n    '#title': Curso\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#required': true\ngeo_inscricao_mestrado_concluido_em:\n  '#type': fieldset\n  '#title': 'Mestrado concluído em:'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_inscricao_mestrado_data:\n    '#type': date\n    '#title': Data\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n  geo_inscricao_mestrado_instituicao:\n    '#type': textfield\n    '#title': Instituição\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n  geo_inscricao_mestrado_curso:\n    '#type': textfield\n    '#title': Curso\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\ngeo_inscricao_ocupacao_atual:\n  '#type': textfield\n  '#title': 'Ocupação atual'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\ngeo_inscricao_local_de_trabalho:\n  '#type': fieldset\n  '#title': 'Local de trabalho'\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_inscricao_local_trabalho_telefone:\n    '#type': textfield\n    '#title': Telefone\n    '#input_mask': '(99)9999999[9]'\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n  geo_inscricao_local_trabalho_email:\n    '#type': email\n    '#title': E-mail\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\ngeo_inscricao_planilha_processo_seletivo:\n  '#type': webform_document_file\n  '#title': 'Planilha Processo Seletivo'\n  '#multiple': true\n  '#access_create_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n  '#access_update_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n  '#file_extensions': 'xls xlsx'\ngeo_inscricao_relator:\n  '#type': webform_entity_select\n  '#title': Relator\n  '#format': value\n  '#access_create_roles':\n    - coordenador\n  '#access_update_roles':\n    - coordenador\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#target_type': user\n  '#selection_handler': 'default:user'\n  '#selection_settings':\n    include_anonymous: true\n    filter:\n      type: role\n      role:\n        relator: relator\n        administrator: 0\n        candidato: 0\n        coordenador: 0\n        comissao_de_avaliacao: 0\n        orientador: 0\n        aluno: 0\n    sort:\n      field: name\n      direction: ASC\n  '#required': true\ngeo_inscricao_comissao_de_avaliacao:\n  '#type': webform_entity_select\n  '#title': 'Comissão de avaliação'\n  '#access_create_roles':\n    - coordenador\n  '#access_update_roles':\n    - coordenador\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n  '#target_type': user\n  '#selection_handler': 'default:user'\n  '#selection_settings':\n    include_anonymous: false\n    filter:\n      type: role\n      role:\n        comissao_de_avaliacao: comissao_de_avaliacao\n        administrator: 0\n        candidato: 0\n        coordenador: 0\n        relator: 0\n        orientador: 0\n        aluno: 0\n    sort:\n      field: name\n      direction: ASC\n  '#required': true\ngeo_inscricao_group_relator:\n  '#type': fieldset\n  '#title': Relator\n  '#access_create_roles':\n    - relator\n  '#access_update_roles':\n    - relator\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_inscricao_parecer_do_relator:\n    '#type': webform_document_file\n    '#title': 'Parecer do relator'\n    '#access_create_roles':\n      - relator\n    '#access_update_roles':\n      - relator\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': 'doc docx ods'\n    '#required': true\ngeo_inscricao_group_comissao:\n  '#type': fieldset\n  '#title': Comissão\n  '#access_create_roles':\n    - comissao_de_avaliacao\n  '#access_update_roles':\n    - comissao_de_avaliacao\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_inscricao_parecer_da_comissao:\n    '#type': webform_document_file\n    '#title': 'Parecer da comissão'\n    '#access_create_roles':\n      - comissao_de_avaliacao\n    '#access_update_roles':\n      - comissao_de_avaliacao\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': 'pdf doc docx  ods'\n    '#required': true\ngeo_inscricao_arquivos:\n  '#type': fieldset\n  '#title': Arquivos\n  '#access_create_roles':\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n  '#access_update_roles':\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_inscricao_carta_modelo:\n    '#type': processed_text\n    '#access_create_roles': {  }\n    '#access_update_roles': {  }\n    '#access_view_roles':\n      - aluno\n    '#text': \"<p><a href=\\\"http://www.iag.usp.br/pos/sites/default/files/Carta%20de%20Recomenda%C3%A7%C3%A3o_Geof%C3%ADsica_0.doc\\\">Modelo da carta de recomendação</a></p>\\r\\n\\r\\n<p><a href=\\\"http://www.iag.usp.br/pos/sites/default/files/Modelo%20curriculum%20Vitae_geofisica%20NOVO.doc\\\">Modelo de Currículum Vitae</a></p>\\r\\n\"\n    '#format': basic_html\n  geo_inscricao_planilha:\n    '#type': processed_text\n    '#access_create_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n    '#access_update_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n    '#text': \"<p><a href=\\\"http://localhost/system/files/2018-12/geo_inscricao_planilha_processo_seletivo.xlsx\\\">Processo seletivo</a></p>\\r\\n\"\n    '#format': basic_html\ngeo_inscricao_anexos:\n  '#type': fieldset\n  '#title': Anexos\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_inscricao_cv:\n    '#type': webform_document_file\n    '#title': 'CV e Documentos comprobatórios'\n    '#multiple': 4\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': pdf\n    '#required': true\n  geo_inscricao_carta_de_recomendacao:\n    '#type': webform_document_file\n    '#title': 'Carta de recomendação'\n    '#multiple': 2\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': pdf\n    '#required': true\n  projeto_de_doutorado:\n    '#type': webform_document_file\n    '#title': 'Projeto de doutorado'\n    '#access_create_roles':\n      - aluno\n    '#access_update_roles':\n      - aluno\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': pdf\n    '#required': true"
+css: '.node__meta {display: none}'
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  spawn_maestro_workflow:
+    id: maestro
+    label: 'Inscrição Geo Workflow'
+    handler_id: spawn_maestro_workflow
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      maestro_template: processo_de_inscricao
+      maestro_message_success: 'Inscrição concluída'
+      maestro_message_failure: 'Erro ao enviar inscrição'

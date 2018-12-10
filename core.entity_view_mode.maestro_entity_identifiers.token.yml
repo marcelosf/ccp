@@ -1,0 +1,10 @@
+uuid: 0cfa8511-72c3-41a6-976c-987f24886b48
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - maestro
+id: maestro_entity_identifiers.token
+label: Token
+targetEntityType: maestro_entity_identifiers
+cache: true

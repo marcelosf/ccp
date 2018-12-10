@@ -1,0 +1,18 @@
+uuid: fd772bc8-23ae-4768-b9fe-0398d911ef7d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.upload_privado
+id: node.upload_privado.title
+field_name: title
+entity_type: node
+bundle: upload_privado
+label: Upload
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

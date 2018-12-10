@@ -1,0 +1,22 @@
+uuid: 5a672f71-3d05-4568-89de-0d6e6d61cd02
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.upload_privado
+  module:
+    - text
+id: node.upload_privado.body
+field_name: body
+entity_type: node
+bundle: upload_privado
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

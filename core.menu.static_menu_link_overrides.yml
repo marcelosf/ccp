@@ -1,0 +1,40 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  node__add_page:
+    weight: -50
+    menu_name: tools
+    parent: ''
+    enabled: true
+    expanded: false
+  filter__tips_all:
+    weight: -48
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: false
+  maestro__menu:
+    weight: -45
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: true
+  search__view:
+    weight: -43
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: false
+  maestro_task_console__menu:
+    weight: -42
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: true
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+langcode: pt-br

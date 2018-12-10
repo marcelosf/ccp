@@ -1,0 +1,10 @@
+uuid: 6b42b386-2404-4c38-8b4e-9b1a508608e7
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - maestro
+id: maestro_process_variables.token
+label: Token
+targetEntityType: maestro_process_variables
+cache: true

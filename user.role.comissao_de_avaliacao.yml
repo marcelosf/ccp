@@ -1,0 +1,16 @@
+uuid: 45cd0ac6-e1d9-424c-ac08-3335a242d401
+langcode: pt-br
+status: true
+dependencies: {  }
+id: comissao_de_avaliacao
+label: 'Comissão de avaliação'
+weight: 5
+is_admin: null
+permissions:
+  - 'edit any webform submission'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
+  - 'view any webform submission'
+  - 'view field_upload_arquivo'
+  - 'view maestro task console'
+  - 'view webform submissions own node'

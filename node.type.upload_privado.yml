@@ -1,0 +1,18 @@
+uuid: 659fddbb-23dd-44b2-a70e-0bcf81cdab84
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Upload Privado'
+type: upload_privado
+description: 'Upload de arquivos privados para o site. '
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

@@ -1,0 +1,21 @@
+uuid: 84023a4d-549c-4675-b95a-a5cd5f24708a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_upload_descricao
+    - node.type.upload_privado
+  module:
+    - text
+id: node.upload_privado.field_upload_descricao
+field_name: field_upload_descricao
+entity_type: node
+bundle: upload_privado
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

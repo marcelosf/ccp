@@ -1,0 +1,47 @@
+uuid: 40b9a539-66ce-413d-bac5-1240c26cbe05
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.upload_privado.body
+    - field.field.node.upload_privado.field_upload_arquivo
+    - field.field.node.upload_privado.field_upload_descricao
+    - node.type.upload_privado
+  module:
+    - file
+    - text
+    - user
+id: node.upload_privado.default
+targetEntityType: node
+bundle: upload_privado
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_upload_arquivo:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_upload_descricao:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

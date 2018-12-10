@@ -1,0 +1,22 @@
+uuid: 0b35737e-eb0d-43e3-bc92-74118cd270ef
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.upload_privado
+id: node.upload_privado.promote
+field_name: promote
+entity_type: node
+bundle: upload_privado
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

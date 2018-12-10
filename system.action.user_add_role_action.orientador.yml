@@ -1,0 +1,14 @@
+uuid: cbb2c214-bf2b-429b-8351-d026975b3802
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.orientador
+  module:
+    - user
+id: user_add_role_action.orientador
+label: 'Add the Orientador role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: orientador

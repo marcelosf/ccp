@@ -1,0 +1,14 @@
+uuid: bbebd4d8-78d5-4bce-80ef-e7a7fd2ef1a3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.orientador
+  module:
+    - user
+id: user_remove_role_action.orientador
+label: 'Remove the Orientador role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: orientador

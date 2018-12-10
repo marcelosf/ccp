@@ -1,0 +1,181 @@
+uuid: 51f9e7e4-0822-448a-ba3e-a9dcefd49b3e
+langcode: pt-br
+status: open
+dependencies:
+  module:
+    - maestro_webform
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: relatorios
+title: Relatórios
+description: 'Relat&oacute;rios de projeto'
+category: Geofísica
+elements: "geo_relatorio_relator:\n  '#type': webform_entity_select\n  '#title': Relator\n  '#access_create_roles':\n    - coordenador\n  '#access_update_roles':\n    - coordenador\n  '#access_view_roles':\n    - coordenador\n  '#target_type': user\n  '#selection_handler': 'default:user'\n  '#selection_settings':\n    include_anonymous: true\n    filter:\n      type: role\n      role:\n        relator: relator\n        administrator: 0\n        candidato: 0\n        coordenador: 0\n        comissao_de_avaliacao: 0\n        maestro_role_51: 0\n        orientador: 0\n    sort:\n      field: name\n      direction: ASC\n  '#required': true\ngeo_relatorio_orientador:\n  '#type': webform_entity_select\n  '#title': Orientador\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  '#target_type': user\n  '#selection_handler': 'default:user'\n  '#selection_settings':\n    include_anonymous: true\n    filter:\n      type: role\n      role:\n        orientador: orientador\n        administrator: 0\n        candidato: 0\n        coordenador: 0\n        comissao_de_avaliacao: 0\n        relator: 0\n        aluno: 0\n    sort:\n      field: name\n      direction: ASC\n  '#required': true\ngeo_relatorio_programa_container:\n  '#type': fieldset\n  '#title': Programa\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n  geo_relatorio_programa:\n    '#type': select\n    '#title': Programa\n    '#options':\n      Doutorado: Doutorado\n      Mestrado: Mestrado\n    '#required': true\ngeo_inscricao_anexos:\n  '#type': fieldset\n  '#title': Anexos\n  '#access_create_roles':\n    - aluno\n  '#access_update_roles':\n    - aluno\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_relatorio_relatorio:\n    '#type': webform_document_file\n    '#title': Relatório\n    '#uri_scheme': public\n    '#required': true\n  geo_relatorio_formulario_de_encaminhamento:\n    '#type': webform_document_file\n    '#title': 'Formulário de encaminhamento'\n    '#uri_scheme': public\n    '#required': true\ngeo_parecer_orientador_doutorado:\n  '#type': fieldset\n  '#title': 'Parecer Orientador Doutorado'\n  '#states':\n    visible:\n      ':input[name=\"geo_relatorio_programa\"]':\n        value: Doutorado\n  '#access_create_roles':\n    - orientador\n  '#access_update_roles':\n    - orientador\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_relatorio_periodo:\n    '#type': select\n    '#title': Período\n    '#options':\n      '1º semestre (parcial)': '1º semestre (parcial)'\n      '2º semestre (completo)': '2º semestre (completo)'\n      '3º semestre (parcial)': '3º semestre (parcial)'\n      '4º semestre (completo)': '4º semestre (completo)'\n      '5º semestre (parcial)': '5º semestre (parcial)'\n      '6º semestre (completo)': '6º semestre (completo)'\n      '7º semestre': '7º semestre'\n    '#required': true\n  geo_inscricao_parecer_do_orientador:\n    '#type': webform_document_file\n    '#title': 'Parecer do Orientador'\n    '#multiple': true\n    '#access_create_roles':\n      - orientador\n    '#access_update_roles':\n      - orientador\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': 'doc docx pdf'\n    '#required': true\n  geo_relatorio_formulario_parecer_doutorado_orientador:\n    '#type': processed_text\n    '#access_create_roles':\n      - administrator\n      - orientador\n    '#access_update_roles':\n      - administrator\n      - orientador\n    '#access_view_roles':\n      - administrator\n      - orientador\n    '#text': \"<p><a href=\\\"/system/files/2018-12/parecer_orientador_doutorado_geofisica.doc\\\">Fomulário Parecer do Orientador</a></p>\\r\\n\"\n    '#format': basic_html\ngeo_parecer_relator_doutorado:\n  '#type': fieldset\n  '#title': 'Parecer Relator Doutorado'\n  '#states':\n    visible:\n      ':input[name=\"geo_relatorio_programa\"]':\n        value: Doutorado\n  '#access_create_roles':\n    - relator\n  '#access_update_roles':\n    - relator\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_relatorio_relator_periodo:\n    '#type': select\n    '#title': Período\n    '#options':\n      '1º semestre (parcial)': '1º semestre (parcial)'\n      '2º semestre (completo)': '2º semestre (completo)'\n      '3º semestre (parcial)': '3º semestre (parcial)'\n      '4º semestre (completo)': '4º semestre (completo)'\n      '5º semestre (parcial)': '5º semestre (parcial)'\n      '6º semestre (completo)': '6º semestre (completo)'\n      '7º semestre': '7º semestre'\n    '#access_create_roles':\n      - relator\n    '#access_update_roles':\n      - relator\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#required': true\n  geo_relatorio_parecer_do_relator:\n    '#type': webform_document_file\n    '#title': 'Parecer do Relator'\n    '#multiple': true\n    '#access_create_roles':\n      - relator\n    '#access_update_roles':\n      - relator\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': 'doc docx pdf'\n    '#required': true\n  geo_relatorio_formulario_parecer_doutorado_relator:\n    '#type': processed_text\n    '#access_create_roles':\n      - relator\n    '#access_update_roles':\n      - relator\n    '#access_view_roles':\n      - relator\n    '#text': \"<p><a href=\\\"system/files/2018-12/parecer_relator_doutorado_geofisica.doc\\\">Fomulário Parecer do&nbsp;Relator</a></p>\\r\\n\"\n    '#format': basic_html\ngeo_relatorio_parecer_orientador_mestrado:\n  '#type': fieldset\n  '#title': 'Parecer Orientador Mestrado'\n  '#states':\n    visible:\n      ':input[name=\"geo_relatorio_programa\"]':\n        value: Mestrado\n  '#access_create_roles':\n    - orientador\n  '#access_update_roles':\n    - orientador\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_orientador_mestrado_periodo:\n    '#type': select\n    '#title': Período\n    '#options':\n      '1º semestre (parcial)': '1º semestre (parcial)'\n      '2º semestre (completo)': '2º semestre (completo)'\n      '3º semestre (parcial)': '3º semestre (parcial)'\n      '4º semestre (completo)': '4º semestre (completo)'\n      '5º semestre (parcial)': '5º semestre (parcial)'\n      '6º semestre (completo)': '6º semestre (completo)'\n      '7º semestre': '7º semestre'\n    '#access_create_roles':\n      - orientador\n    '#access_update_roles':\n      - orientador\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#required': true\n  geo_relatorio_mestrado_parecer_do_orientador:\n    '#type': webform_document_file\n    '#title': 'Parecer do Orientador'\n    '#multiple': true\n    '#access_create_roles':\n      - orientador\n    '#access_update_roles':\n      - orientador\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': 'doc docx pdf'\n    '#required': true\n  geo_relatorio_formulario_parecer_orientador_mestrado:\n    '#type': processed_text\n    '#access_create_roles':\n      - orientador\n    '#access_update_roles':\n      - orientador\n    '#access_view_roles':\n      - orientador\n    '#text': \"<p><a href=\\\"http://localhost/system/files/webform/formularios/parecer_orientador_mestrado_geofisica.doc\\\">Fomulário Parecer do&nbsp;Orientador</a></p>\\r\\n\"\n    '#format': basic_html\ngeo_relatorio_parecer_relator_mestrado:\n  '#type': fieldset\n  '#title': 'Parecer Relator Mestrado'\n  '#states':\n    visible:\n      ':input[name=\"geo_relatorio_programa\"]':\n        value: Mestrado\n  '#access_create_roles':\n    - relator\n  '#access_update_roles':\n    - relator\n  '#access_view_roles':\n    - coordenador\n    - comissao_de_avaliacao\n    - relator\n    - orientador\n    - aluno\n  geo_relatorio_relator_mestrado_periodo:\n    '#type': select\n    '#title': Período\n    '#options':\n      '1º semestre (parcial)': '1º semestre (parcial)'\n      '2º semestre (completo)': '2º semestre (completo)'\n      '3º semestre (parcial)': '3º semestre (parcial)'\n      '4º semestre (completo)': '4º semestre (completo)'\n      '5º semestre (parcial)': '5º semestre (parcial)'\n      '6º semestre (completo)': '6º semestre (completo)'\n      '7º semestre': '7º semestre'\n    '#access_create_roles':\n      - relator\n    '#access_update_roles':\n      - relator\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#required': true\n  geo_relatorio_mestrado_parecer_do_relator:\n    '#type': webform_document_file\n    '#title': 'Parecer do Relator'\n    '#multiple': true\n    '#access_create_roles':\n      - relator\n    '#access_update_roles':\n      - relator\n    '#access_view_roles':\n      - coordenador\n      - comissao_de_avaliacao\n      - relator\n      - orientador\n      - aluno\n    '#file_extensions': 'doc docx pdf'\n    '#required': true\n  geo_relatorio_formulario_parecer_relator_mestrado:\n    '#type': processed_text\n    '#access_create_roles':\n      - relator\n    '#access_update_roles':\n      - relator\n    '#access_view_roles':\n      - relator\n    '#text': \"<p><a href=\\\"/system/files/2018-12/parecer_relator_mestrado_geofisica.doc\\\">Fomulário Parecer do&nbsp;Relator</a></p>\\r\\n\"\n    '#format': basic_html"
+css: '.node__meta{display: none}'
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  spawn_maestro_workflow:
+    id: maestro
+    label: 'Enviar relatório'
+    handler_id: spawn_maestro_workflow
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      maestro_template: relatorios
+      maestro_message_success: 'Relatório enviado com sucesso'
+      maestro_message_failure: 'Erro ao enviar relatório'

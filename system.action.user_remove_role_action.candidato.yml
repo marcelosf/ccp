@@ -1,0 +1,14 @@
+uuid: 95f9ff93-e3b5-466b-8c7b-df8bd016a80b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.candidato
+  module:
+    - user
+id: user_remove_role_action.candidato
+label: 'Remove the Candidato role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: candidato

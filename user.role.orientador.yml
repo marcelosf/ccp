@@ -1,0 +1,16 @@
+uuid: 4590b21f-ac00-4679-bd5e-a544858528f3
+langcode: pt-br
+status: true
+dependencies: {  }
+id: orientador
+label: Orientador
+weight: 8
+is_admin: null
+permissions:
+  - 'edit any webform submission'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
+  - 'view any webform submission'
+  - 'view field_upload_arquivo'
+  - 'view maestro task console'
+  - 'view webform submissions own node'

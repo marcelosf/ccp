@@ -1,0 +1,9 @@
+uuid: aabe918e-8f67-4bf3-8413-4c9874d326f5
+langcode: pt-br
+status: true
+dependencies: {  }
+id: orgao_emissor
+label: 'Órgão Emissor'
+category: Documentos
+likert: false
+options: "SSP: SSP\nPM: PM\nPC: PC\nCNT: CNT\nDIC: DIC\nMEX: MEX\nMAE: MAE\nMMA: MMA\nMTE: MTE\nIML: IML\nIPF: IPF\nCTPS: CTPS\nIFP: IFP\nFGTS: FGTS\nPOF: POF\nPOM: POM\nSES: SES\nSJS: SJS\nSJTS: SJTS\n"

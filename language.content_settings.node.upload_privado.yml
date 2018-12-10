@@ -1,0 +1,11 @@
+uuid: 72e01f0a-4b78-4ed4-a67a-d43df71a637f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.upload_privado
+id: node.upload_privado
+target_entity_type_id: node
+target_bundle: upload_privado
+default_langcode: site_default
+language_alterable: false

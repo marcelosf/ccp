@@ -1,0 +1,35 @@
+uuid: 120f6c0c-0687-46ec-8f74-4ebe77cd4933
+langcode: pt-br
+status: true
+dependencies: {  }
+id: redirecionar_aluno_apos_o_login
+label: 'Redirecionar aluno após o login'
+events:
+  -
+    event_name: rules_user_login
+description: 'Redirecionar o aluno para a página taskconsole após efetuar o login'
+tags:
+  - Redirecionamentos
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 952fcb61-ddd7-4364-9244-76ebe67729ef
+  conditions:
+    id: rules_and
+    uuid: f942b31a-f6e5-439d-8e86-6baf48c06cec
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: d80e9d25-d0be-4bb8-a090-f167ecdd6200
+    actions:
+      -
+        id: rules_action
+        uuid: 9f37dbb7-0e57-4669-8cb8-97c85463e2b9
+        context_values:
+          url: 'http://localhost/taskconsole'
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect

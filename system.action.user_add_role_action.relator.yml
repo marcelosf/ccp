@@ -1,0 +1,14 @@
+uuid: a2ccb782-2ddf-45ac-99a9-cd4aa395f4f8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.relator
+  module:
+    - user
+id: user_add_role_action.relator
+label: 'Add the Relator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: relator

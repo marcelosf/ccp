@@ -1,0 +1,14 @@
+uuid: e8f38c2c-ba3e-4779-81b7-92b7531df084
+name: CCP
+mail: marcelo.fialho@iag.usp.br
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user
+admin_compact_mode: false
+weight_select_max: 100
+langcode: pt-br
+default_langcode: pt-br
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

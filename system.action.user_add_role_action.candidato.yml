@@ -1,0 +1,14 @@
+uuid: 77d00e45-b8d1-42b2-b3b3-14f959d59ea8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.candidato
+  module:
+    - user
+id: user_add_role_action.candidato
+label: 'Add the Candidato role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: candidato
